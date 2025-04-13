@@ -4,10 +4,10 @@ import "../styles/global.css";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Next Movies",
-    default: "Next Movies",
+    template: "%s | The New York Times Best Sellers",
+    default: "The New York Times Best Sellers",
   },
-  description: "The best movies on the best framework",
+  description:"%s",
 };
 export default function RootLayout({
   children,

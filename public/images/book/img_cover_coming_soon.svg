@@ -1,0 +1,27 @@
+<svg viewBox="0 0 302 454" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 -->
+  <rect width="302" height="454" fill="#f5f5f5"/>
+  
+  <!-- 더 둥글고 부드러운 구름 -->
+  <ellipse cx="151" cy="200" rx="80" ry="40" fill="#e0e0e0" />
+  <ellipse cx="110" cy="185" rx="40" ry="30" fill="#e0e0e0" />
+  <ellipse cx="190" cy="185" rx="40" ry="32" fill="#e0e0e0" />
+  <ellipse cx="135" cy="170" rx="35" ry="25" fill="#e0e0e0" />
+  <ellipse cx="165" cy="170" rx="35" ry="28" fill="#e0e0e0" />
+  <ellipse cx="151" cy="160" rx="30" ry="20" fill="#e0e0e0" />
+  <ellipse cx="120" cy="190" rx="25" ry="25" fill="#e0e0e0" />
+  <ellipse cx="180" cy="190" rx="28" ry="25" fill="#e0e0e0" />
+  
+  <!-- 눈과 미소 -->
+  <circle cx="130" cy="190" r="5" fill="#333" />
+  <circle cx="170" cy="190" r="5" fill="#333" />
+  <path d="M130 220 Q 150 240 170 220" stroke="#333" stroke-width="3" fill="none" />
+  
+  <!-- Coming Soon 텍스트 -->
+  <text x="151" y="280" font-family="Comic Sans MS, cursive" font-size="14" font-weight="500" fill="#333" text-anchor="middle">Coming Soon</text>
+  
+  <!-- 장식적 요소 - 별 -->
+  <path d="M90 130 L 93 140 L 100 140 L 94 146 L 98 156 L 90 150 L 82 156 L 86 146 L 80 140 L 87 140 Z" fill="#a0a0a0" />
+  <path d="M210 150 L 213 160 L 220 160 L 214 166 L 218 176 L 210 170 L 202 176 L 206 166 L 200 160 L 207 160 Z" fill="#a0a0a0" />
+  <path d="M151 330 L 154 340 L 161 340 L 155 346 L 159 356 L 151 350 L 143 356 L 147 346 L 141 340 L 148 340 Z" fill="#a0a0a0" />
+</svg>

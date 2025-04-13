@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import styles from "../styles/book.module.css";
 
@@ -10,7 +8,7 @@ interface IBooksProps{
 
 export default function Book({id,title}:IBooksProps) {
     return (
-        <div className={styles.movie}>
+        <div className={styles.books}>
             <Link prefetch href={`/list?name=${id}`}>
                 {title}
             </Link>

@@ -5,6 +5,7 @@ import styles from "../styles/book-list.module.css"
 export async function getBooksDetail(name:string) {
   const response = await fetch(`${API_HARDCOVER_FICTION}${name}`);
   const json= await response.json();
+  console.log(json.results);
   return json.results;
 }
 
