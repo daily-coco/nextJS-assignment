@@ -7,7 +7,7 @@ export const metadata = {
     description:"The New York Times Best Sellers Home",
 };
 
-export async function getBookList() {
+async function getBookList() {
     const response = await fetch(API_BOOK_LIST);
     const json= await response.json();
     // console.log(json.results);

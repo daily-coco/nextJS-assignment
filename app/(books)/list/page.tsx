@@ -14,16 +14,15 @@ async function getBookCategory(id:string) {
 } 
 
 
-type Params = Promise<{ id: string }>;
-
-export async function generateMetadata({ searchParams }: { searchParams: SearchParams }) {
-  const id = searchParams.name;
+export async function generateMetadata({ searchParams }: { searchParams: Promise<SearchParams>}) {
+  
+  const { name:id } = await searchParams;
   const res = await fetch(`${API_HARDCOVER_FICTION}/${id}`);
   const json = await res.json();
   const category = json.results;
 
   return {
-    title : category.display_name,
+    title: id ? `${category.display_name}` : "Books Category Detail",
   }
 }
 
@@ -31,9 +30,10 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
 export default async function BookInfo({
   searchParams,
 }: {
-  searchParams: SearchParams;
+  searchParams: Promise<SearchParams>;
 }) {
-    const id = searchParams.name; 
+    // const id = searchParams.name; 
+  const { name:id } = await searchParams;
     const booksCategory = await getBookCategory(id);
     return (
       <>
