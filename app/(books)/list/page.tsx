@@ -3,9 +3,10 @@ import BookCover from "../../../components/book-cover";
 import {API_HARDCOVER_FICTION} from "../../../lib/constants"
 import styles from "../../../styles/book-list.module.css"
 
-interface SearchParams {
-  name?: string;
-}
+type SearchParams = Promise<{ name?: string }>;
+// interface SearchParams {
+//   name?: string;
+// }
 async function getBookCategory(id:string) {
   const response = await fetch(`${API_HARDCOVER_FICTION}/${id}`);
   const json= await response.json();
@@ -14,7 +15,7 @@ async function getBookCategory(id:string) {
 } 
 
 
-export async function generateMetadata({ searchParams }: { searchParams: Promise<SearchParams>}) {
+export async function generateMetadata({ searchParams }: { searchParams: SearchParams}) {
   
   const { name:id } = await searchParams;
   const res = await fetch(`${API_HARDCOVER_FICTION}/${id}`);
@@ -30,7 +31,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 export default async function BookInfo({
   searchParams,
 }: {
-  searchParams: Promise<SearchParams>;
+  searchParams: SearchParams;
 }) {
     // const id = searchParams.name; 
   const { name:id } = await searchParams;
