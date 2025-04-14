@@ -3,6 +3,7 @@
   grid-template-columns:repeat(auto-fill, 210px);
   justify-content:center;
   gap: 20px;
+  padding:0 0 30px;
 }
 
 .categoryTitle {

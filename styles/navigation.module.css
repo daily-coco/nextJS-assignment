@@ -26,5 +26,9 @@
   }
 
   .active {
-    color:orange;
+    font-weight: 700;
+  }
+  .active::before,
+  .active::after {
+    content:'♥️';
   }

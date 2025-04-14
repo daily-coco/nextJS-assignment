@@ -1,0 +1,17 @@
+.title {
+    padding:30px 0;
+    font-size:20px;
+    font-weight:700;
+    text-align: center;
+}
+
+.intro {
+    margin:0 auto;
+    width: 80%;
+    text-align: center;
+    line-height: 1.35;
+}
+.intro::before,
+.intro::after {
+    content:'♥️';
+}
