@@ -38,9 +38,8 @@ export default async function BookInfo({
     const booksCategory = await getBookCategory(id);
     return (
       <>
-        <h1>{booksCategory.display_name}</h1>
+        <h1 className={styles.categoryTitle}>{booksCategory.display_name}</h1>
         <div className={styles.container}>
-          
         <Suspense fallback={<h1>Loading!</h1>}> 
           {booksCategory.books.map((book, index) =>(
             <BookCover 
