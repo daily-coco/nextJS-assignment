@@ -34,7 +34,7 @@ export default async function BookInfo({
   searchParams: SearchParams;
 }) {
     // const id = searchParams.name; 
-  const { name:id } = await searchParams;
+  const { list_name_encoded:id } = await searchParams;
   if(!id) {
     return <div>현재 책에 등록된 정보가 올바르지 않은 것 같아요! 관리자에게 문의를 남겨주시면 빠르게 조취해드릴께요!</div>
   }
