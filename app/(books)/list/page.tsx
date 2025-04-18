@@ -4,7 +4,7 @@ import {API_HARDCOVER_FICTION} from "../../../lib/constants"
 import styles from "../../../styles/book-list.module.css"
 import BackButton from "../../../components/backButton";
 
-type SearchParams = Promise<{ list_name_encoded?: string }>;
+type SearchParams = Promise<{ name?: string }>;
 
 async function getBookCategory(id:string) {
   const response = await fetch(`${API_HARDCOVER_FICTION}/${id}`);
@@ -15,7 +15,7 @@ async function getBookCategory(id:string) {
 
 export async function generateMetadata({ searchParams }: { searchParams: SearchParams}) {
   
-  const { list_name_encoded:id } = await searchParams;
+  const { name:id } = await searchParams;
   const res = await fetch(`${API_HARDCOVER_FICTION}/${id}`);
   const json = await res.json();
   const category = json.results;
@@ -31,7 +31,7 @@ export default async function BookInfo({
 }: {
   searchParams: SearchParams;
 }) {
-  const { list_name_encoded:id } = await searchParams;
+  const { name:id } = await searchParams;
   if(!id) {
     return (<div className={styles.nodata}>
         <h1 className={styles.nodataTitle}>Sorry!</h1>
