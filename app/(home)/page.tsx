@@ -10,7 +10,7 @@ export const metadata = {
 async function getBookList() {
     const response = await fetch(API_BOOK_LIST);
     const json= await response.json();
-    // console.log(json.results);
+    console.log(json.results);
     return json.results;
 }
 
