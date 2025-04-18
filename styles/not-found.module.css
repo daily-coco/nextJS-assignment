@@ -1,0 +1,13 @@
+.notFound {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding:50px 0;
+    gap:30px;
+    text-align: center;
+}
+.title {
+    font-size:40px;
+    font-weight: 500;
+    line-height: 1.6;
+}
