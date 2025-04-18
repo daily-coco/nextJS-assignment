@@ -25,3 +25,27 @@
   margin-top: 20px;
   gap: 20px;
 }
+
+.nodata {
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  align-items: center;
+  justify-content: center;
+  padding:100px 0;
+  font-size:18px;
+}
+.nodataTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:50px;
+  font-size:40px;
+  font-weight: 700;
+  border-radius: 100%;
+  background-color: #ddd;
+}
+.nodatDesc {
+  line-height: 1.65;
+  text-align: center;
+}

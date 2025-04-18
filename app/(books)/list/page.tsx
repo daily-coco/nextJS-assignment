@@ -2,15 +2,13 @@ import { Suspense } from "react";
 import BookCover from "../../../components/book-cover";
 import {API_HARDCOVER_FICTION} from "../../../lib/constants"
 import styles from "../../../styles/book-list.module.css"
+import BackButton from "../../../components/backButton";
 
 type SearchParams = Promise<{ list_name_encoded?: string }>;
-// interface SearchParams {
-//   name?: string;
-// }
+
 async function getBookCategory(id:string) {
   const response = await fetch(`${API_HARDCOVER_FICTION}/${id}`);
   const json= await response.json();
-  // console.log(json.results);
   return json.results;
 } 
 
@@ -33,10 +31,16 @@ export default async function BookInfo({
 }: {
   searchParams: SearchParams;
 }) {
-    // const id = searchParams.name; 
   const { list_name_encoded:id } = await searchParams;
   if(!id) {
-    return <div>현재 책에 등록된 정보가 올바르지 않은 것 같아요! 관리자에게 문의를 남겨주시면 빠르게 조취해드릴께요!</div>
+    return (<div className={styles.nodata}>
+        <h1 className={styles.nodataTitle}>Sorry!</h1>
+        <p className={styles.nodatDesc}>
+        I think the information currently registered in the book is incorrect!<br/>
+        Please leave an inquiry to the administrator and we will take quick action!
+        </p>
+        <BackButton/>
+      </div>);
   }
     const booksCategory = await getBookCategory(id);
     return (
