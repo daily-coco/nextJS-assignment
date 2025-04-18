@@ -1,0 +1,14 @@
+.btnWrap {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.btnBack {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding:10px;
+    border-radius: 10px;
+    color:#fff;
+    background-color: #50553f;
+}

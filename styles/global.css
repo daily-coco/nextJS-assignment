@@ -155,3 +155,8 @@ a {
 a:hover {
   text-decoration: underline;
 }
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border:0;
+}
